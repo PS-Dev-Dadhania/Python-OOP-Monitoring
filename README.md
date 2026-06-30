@@ -436,31 +436,9 @@ For a comprehensive breakdown of the bug, the memory model implications, and the
 
 ---
 
-# 16. Screenshots Section
 
-*(In a deployed GitHub environment, actual PNG/JPG files would be linked here)*
 
-[Application Home Screen]
-> *Screenshot showing the initial boot sequence of AetherWatch in the terminal.*
-
-[Bug Demonstration]
-> *Screenshot showing `db_server` unexpectedly receiving tags intended only for `web_server` due to the mutable default argument bug.*
-
-[Debugger Output]
-> *Screenshot of a VS Code / PyCharm debugger showing the identical memory addresses of `self._tags` across multiple distinct objects.*
-
-[Fixed Execution]
-> *Screenshot showing independent tag lists after applying the `tags=None` fix.*
-
-[Class Diagram Screenshot]
-> *Rendered view of the Mermaid class diagram.*
-
-[Flowchart Screenshot]
-> *Rendered view of the operational flowchart.*
-
----
-
-# 17. Installation Guide
+# 16. Installation Guide
 
 ### Prerequisites
 * **Python Version:** Python 3.8 or higher.
@@ -488,7 +466,7 @@ python main.py
 
 ---
 
-# 18. Usage Examples
+# 17. Usage Examples
 
 **Example 1: Running the Core Loop**
 When you execute `python main.py`, the system registers three dummy resources (two compute, one storage). It then simulates two monitoring cycles.
@@ -503,7 +481,7 @@ When you execute `python main.py`, the system registers three dummy resources (t
 
 ---
 
-# 19. Testing Strategy
+# 18. Testing Strategy
 
 The project utilizes Python's built-in `unittest` framework to guarantee the reliability of the OOP architecture.
 * **Unit Tests:** Located in `tests/test_monitor.py`. These tests instantiate the models and services in isolation.
@@ -517,7 +495,7 @@ python -m unittest discover tests/
 
 ---
 
-# 20. Future Improvements
+# 19. Future Improvements
 
 * **Short-term improvements:** Implement `dataclasses` for the metrics payloads to enforce strict type hinting rather than relying on standard dictionaries.
 * **Long-term enterprise improvements:** Decouple the monitoring loop into an asynchronous architecture using Python's `asyncio` to allow concurrent polling of thousands of resources simultaneously.
@@ -527,7 +505,7 @@ python -m unittest discover tests/
 
 ---
 
-# 21. Industry Perspective: How Professional Software Teams Use These OOP Concepts
+# 20. Industry Perspective: How Professional Software Teams Use These OOP Concepts
 
 In professional software engineering environments, the Object-Oriented paradigms demonstrated in this project are not merely academic exercises; they are critical survival mechanisms for managing the immense complexity of enterprise applications. When a codebase grows to hundreds of thousands of lines of code, contributed to by dozens of developers simultaneously, strict architectural boundaries are the only thing preventing total systemic collapse.
 
@@ -551,7 +529,7 @@ Finally, documentation like this README is considered a first-class citizen in r
 
 ---
 
-# 22. Learning Outcomes
+# 21. Learning Outcomes
 
 This project serves as a comprehensive masterclass in applied software engineering. Through its construction, it demonstrates:
 * **Software Engineering:** The transition from writing simple scripts to designing modular, service-oriented architectures.
