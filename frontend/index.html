@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherWatch | Cloud Resource Monitor</title>
+    <!-- Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="glass-panel main-header">
+            <div class="brand">
+                <div class="brand-icon"></div>
+                <h1>AetherWatch <span>Dashboard</span></h1>
+            </div>
+            <div class="system-status">
+                <span class="pulse-indicator"></span>
+                <span id="global-status-text">System Monitoring...</span>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="dashboard-grid">
+            <!-- Left Column: Resources -->
+            <section class="resources-section">
+                <h2>Monitored Resources</h2>
+                <div id="resource-container" class="resource-grid">
+                    <!-- Resource Cards injected via JS -->
+                </div>
+            </section>
+
+            <!-- Right Column: Alerts & Bugs -->
+            <aside class="sidebar">
+                <section class="glass-panel alert-panel">
+                    <div class="panel-header">
+                        <h2>Active Alerts</h2>
+                        <span id="alert-count" class="badge">0</span>
+                    </div>
+                    <div id="alert-container" class="alert-list">
+                        <!-- Alerts injected via JS -->
+                        <div class="empty-state">No active alerts. System healthy.</div>
+                    </div>
+                </section>
+                
+                <section class="glass-panel bug-panel">
+                    <div class="panel-header">
+                        <h2>Demonstration Bug</h2>
+                    </div>
+                    <div class="bug-content">
+                        <p>Watch the <strong>tags</strong> on the resources.</p>
+                        <p>A mutable default argument bug in <code>base_resource.py</code> causes all untagged resources to share the same tag list.</p>
+                        <p>Notice how <em>web-server-01</em>'s production tag leaks to the other resources!</p>
+                    </div>
+                </section>
+            </aside>
+        </main>
+    </div>
+
+    <!-- Templates -->
+    <template id="resource-card-template">
+        <div class="glass-panel resource-card">
+            <div class="card-header">
+                <div class="resource-info">
+                    <h3 class="resource-name"></h3>
+                    <span class="resource-type"></span>
+                </div>
+                <div class="status-badge"></div>
+            </div>
+            <div class="card-body">
+                <div class="resource-meta">
+                    <span class="region-label"></span>
+                    <span class="id-label"></span>
+                </div>
+                <div class="metrics-grid">
+                    <!-- Metrics injected via JS -->
+                </div>
+                <div class="tags-container">
+                    <!-- Tags injected via JS -->
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
